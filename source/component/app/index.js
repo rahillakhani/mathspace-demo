@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import dataSet from '../../service/datacall.js';
-import Header from '../header'
-require('./style.scss');
+import Header from '../header';
+import Timeline from '../timeline';
 
 export default class app extends Component {
 	constructor(props) {
@@ -37,11 +37,11 @@ export default class app extends Component {
 
 		return (
 			<div>
-				<header>
-					<div id="burgerMenu">=</div>
-					<div id="pageTitle">Title</div>
-					<div id="user">User</div>
-				</header>
+				<Header />
+				
+				{ Object.keys(this.state.dataRec).length > 0 &&
+					<Timeline length={ this.state.dataRec.subtopics }/>
+				}
 				<section id="timeline_container">
 					<span id="left">&lt;</span>
 					<ul id="timeline">

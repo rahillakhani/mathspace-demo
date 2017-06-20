@@ -1,6 +1,7 @@
-1. npm i
-2. npm start
-3. npm test
+1. node server.js
+2. npm i
+3. npm start
+4. npm test
 
 for any info : lakhani.rj@gmail.com
 

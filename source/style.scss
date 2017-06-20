@@ -1,0 +1,31 @@
+/* Variables */
+
+/*Common */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+	background: #ccc;
+	font-family: 'Raleway'
+}
+.grid {
+	display: table;
+	width: 100%;
+	&-row {
+		display: table-row;
+	}
+	&-cell {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+@import './component/app/style';
+@import './component/header/style';
+
+/* Layout */
+.app {
+	max-width: 500px;
+	height: 800px;
+	margin: 10px auto;
+	background: #fff;
+}
