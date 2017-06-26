@@ -1,7 +1,7 @@
 /* Variables */
 
 /*Common */
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+// @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 body {
 	background: #ccc;
@@ -21,6 +21,7 @@ body {
 
 @import './component/app/style';
 @import './component/header/style';
+@import './component/timeline/style';
 
 /* Layout */
 .app {

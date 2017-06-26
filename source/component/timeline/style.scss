@@ -1,0 +1,33 @@
+.timeline {
+	line-height: 50px;
+	position: relative;
+	z-index: 50;
+	overflow: hidden;
+    width: calc(8*100%);
+
+	&:before {
+		content: '';
+		border-top: 2px solid #ccc;
+		position: absolute;
+		top: 24px;
+		display: block;
+		width: 100%;
+		z-index: -1;
+	}
+	.seq {
+		display: inline-block;
+		line-height: 30px;
+		width: 30px;
+		text-align: center;
+		border-radius: 50%;
+		background: #ccc;
+		cursor: pointer;
+		// margin-left: 50%;
+		margin-left: 205px;
+		// position: relative;
+		// left: -50%;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
