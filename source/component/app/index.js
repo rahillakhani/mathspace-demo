@@ -43,13 +43,6 @@ export default class app extends Component {
 		}
 	}
 	setContent(){
-		// let dataArr = Object.keys(this.state.dataRec).length > 0 &&
-		// 					this.state.dataRec.subtopics.map(topic => 
-		// 						<li key={ topic.title }>
-		// 							{ topic.title }
-		// 						</li>
-		// 					)
-		// console.log(dataArr);
 		let dataArr = Object.keys(this.state.dataRec).length > 0 && 
 						this.state.dataRec.subtopics.map((topic,index )=>{ 
 							return topic.title
@@ -57,7 +50,6 @@ export default class app extends Component {
 						// this.state.dataRec.subtopics
 						// .map( x => x.title)
 		// console.log(this.state.val);
-		console.log(dataArr[this.state.val]);
 		return <li>{ dataArr[this.state.val] }</li>;
 	}
 
@@ -70,7 +62,7 @@ export default class app extends Component {
 				{ Object.keys(this.state.dataRec).length > 0 &&
 					<Timeline
 						selected={ this.state.val }
-						timelength={ Object.keys(this.state.dataRec).length }
+						timelength={ this.state.dataRec.subtopics.length }
 						onClick={ this.getSelected.bind(this) }
 					/>
 				}

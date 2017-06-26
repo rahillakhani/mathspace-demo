@@ -2,11 +2,20 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class Timeline extends Component {
-
+	createTimeLineElement(){
+		let elemLength = this.props.timelength;
+		console.log(elemLength);
+		let totalElem;
+		for(i = 0; i < elemLength.length; i++){
+			totalElem = <a id={ i }>{ i }</a>
+		}
+		return totalElem;
+	}
 	render() {
 	return (
 		<div className="timeline">
 			<a onClick={ this.props.onClick } id="-1" className='seq' key="0">&lt;</a>
+			{/* this.props.timelength && this.createTimeLineElement */}
 			<a className='seq' key="1" id="1">{ this.props.selected + 1 }</a>
 			<a onClick={ this.props.onClick } id="+1" className='seq' key="2">&gt;</a>
 		</div>
